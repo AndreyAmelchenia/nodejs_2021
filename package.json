@@ -1,0 +1,23 @@
+{
+  "name": "nodejs_2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index --action encode --shift -7 -i ./input.txt  -o ./output.txt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreyAmelchenia/nodejs_2021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreyAmelchenia/nodejs_2021/issues"
+  },
+  "homepage": "https://github.com/AndreyAmelchenia/nodejs_2021#readme",
+  "dependencies": {
+    "commander": "^7.2.0"
+  }
+}
