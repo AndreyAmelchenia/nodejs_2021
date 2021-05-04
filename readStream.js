@@ -4,5 +4,5 @@ const { input } = require('./command');
 
 module.exports = input 
   ? fs.createReadStream(path.join(__dirname, input), 'utf8')
-    .on('error', (err)=> console.error('no such file or directory')) 
+    .on('error', (err) => process.stderr) 
   : process.stdin;
