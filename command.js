@@ -20,6 +20,7 @@ function isArg(arg) {
       return false;
   }
 }
+
 function nameArg(arg) {
   switch (arg) {
     case '-s':
@@ -54,6 +55,5 @@ const arguments = process.argv.reduce((acc, item, index, arr) => {
   };
   return acc;
 }, initArguments);
-
 
 module.exports = arguments;
