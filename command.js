@@ -43,6 +43,7 @@ function nameArg(arg) {
       return false;
   }
 }
+
 const initArguments = {
   shift: false,
   input: false,

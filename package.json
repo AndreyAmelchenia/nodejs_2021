@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index --action encode --shift -7 -i ./input.txt  -o ./output.txt"
+    "test": "node index --action decode --shift -33 -i ./input.txt  -o ./output.txt"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,5 @@
     "url": "https://github.com/AndreyAmelchenia/nodejs_2021/issues"
   },
   "homepage": "https://github.com/AndreyAmelchenia/nodejs_2021#readme",
-  "dependencies": {
-    "commander": "^7.2.0"
-  }
+  "dependencies": {}
 }

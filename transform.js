@@ -10,20 +10,17 @@ class T extends Transform {
   }
   _transform(chunk, encoding, done) {
     try{
-      if(!!this.code && !!this.shift) {
-        this.push(caesar(chunk, this.shift, this.code), encoding);
-        done();
-      } else {
-        if(!this.code && !this.shift) {
-          throw 'No action and shift!!!'
-        }
-        if(!this.code) {
-          throw 'No action!!!'
-        }
-        if(!!!this.shift) {
-          throw 'No shift!!!'
-        }  
+      if(!this.code && !this.shift) {
+        throw 'No action and shift!!!'
       }
+      if(!this.code) {
+        throw 'No action!!!'
+      }
+      if(!this.shift) {
+        throw 'No shift!!!'
+      }
+      this.push(caesar(chunk, this.shift, this.code), encoding);
+      done();  
     } catch (err) {
       done(err);
     }
