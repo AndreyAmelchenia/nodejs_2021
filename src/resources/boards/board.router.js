@@ -14,9 +14,10 @@ async (req, res) => {
 );
 
 router.route('/:boardId').get(
+  
   async (req, res) => {
-    const board = await boardsService.getId(req.params.userId);
-    res.json(board);
+    const board = await boardsService.getId(req.params.boardId);
+    res.status(board ? 200 : 404).json(board);
   }
 );
 

@@ -23,8 +23,6 @@ class User {
     this.name = name || this.name;
     this.login = login || this.login;
     this.password = password|| this.password;
-
-    console.log(this);
   }
 }
 
