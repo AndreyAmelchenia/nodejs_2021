@@ -1,16 +1,10 @@
 const { v4: uuidV4 } = require('uuid');
 
-class User {
-  constructor({
-    id = uuidV4(),
-    name = 'USER',
-    login = 'user',
-    password = 'P@55w0rd'
-  } = {}) {
+class Board {
+  constructor({ id = uuidV4(), title, columns }) {
     this.id = id;
-    this.name = name;
-    this.login = login;
-    this.password = password;
+    this.title = title;
+    this.columns = columns;
   }
 
   static toResponse(user) {
@@ -28,4 +22,4 @@ class User {
   }
 }
 
-module.exports = User;
+module.exports = Board;
