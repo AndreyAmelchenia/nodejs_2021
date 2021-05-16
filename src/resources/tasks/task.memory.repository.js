@@ -23,4 +23,8 @@ const updateTasksByIdUser = async (userId) => {
   TASKS.forEach((el)=> el.userId === userId && el.updateTasksByIdUser())
 }
 
-module.exports = { getAll, post, getId, put, deleteTask, updateTasksByIdUser };
+const deleteTasksByIdBoard = async (boardId) => {
+  TASKS = TASKS.filter((el)=> el.boardId !== boardId)
+};
+
+module.exports = { getAll, post, getId, put, deleteTask, updateTasksByIdUser, deleteTasksByIdBoard };

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const boardsService = require('./board.service');
+const {deleteTasksByIdBoard} = require('../tasks/task.memory.repository');
 
 router.route('/').get(async (req, res) => {
   const boards = await boardsService.getAll();
@@ -31,6 +32,7 @@ router.route('/:boardId').put(
 router.route('/:boardId').delete(
   async (req, res) => {
       await boardsService.deleteBoard(req.params.boardId);
+      await deleteTasksByIdBoard(req.params.boardId);
       res
         .status(204)
         .send(`A user with this Id:"${req.params.boardId}" no delete!!!`);
