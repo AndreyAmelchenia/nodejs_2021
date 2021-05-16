@@ -12,13 +12,6 @@ const getId = async id => usersRepo.getId(id);
 
 const putUser = async (id, userUpdate) => usersRepo.put(id, userUpdate);
 
-
-// const getLogin = async login => usersRepo.getLogin(login);
-
-
-
-
-
 const deleteUser = async id => usersRepo.deleteUser(id);
 
 module.exports = {

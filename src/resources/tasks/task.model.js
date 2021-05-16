@@ -28,6 +28,10 @@ class Task {
     this.boardId = boardId|| this.boardId;
     this.columnId = columnId|| this.columnId;
   }
+
+  updateTasksByIdUser() {
+    this.userId = null
+  }
 }
 
 module.exports = Task;

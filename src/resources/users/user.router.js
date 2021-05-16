@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const User = require('./user.model');
 const usersService = require('./user.service');
+const {updateTasksByIdUser} = require('../tasks/task.memory.repository');
 
 router.route('/').get(async (req, res) => {
   const users = await usersService.getAll();
@@ -31,6 +32,7 @@ router.route('/:userId').put(
 router.route('/:userId').delete(
   async (req, res) => {
       await usersService.deleteUser(req.params.userId);
+      await updateTasksByIdUser(req.params.userId);
       res
         .status(204)
         .send(`A user with this Id:"${req.params.userId}" no delete!!!`);
